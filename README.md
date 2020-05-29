@@ -2,7 +2,7 @@
 For listing directories and files.
 
 ## Download
-`go get githb.com/M-krishna/ls`
+`go get github.com/M-krishna/ls`
 
 ## Install the Package
 `go install`
