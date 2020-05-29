@@ -8,7 +8,7 @@ For listing directories and files.
 `go install`
 
 ## Setup the environment variable for Windows
-So that you can access the `ls` command outside of your GOPATH
+So that you can access the `ls` command outside of your `$GOPATH`
 
 ## Usage
 * Type `ls` to get the directories and files from current path
