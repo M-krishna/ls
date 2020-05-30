@@ -84,6 +84,7 @@ func otherVersion(root string) error {
 			fmt.Printf(" %v\n", info.Name())
 		}
 	}
+	fmt.Fprint(os.Stdout, "\n")
 	fmt.Fprint(os.Stdout, "Total Directory: ", totalDirectory, ", Total Files: ", totalFiles)
 
 	return nil
