@@ -12,4 +12,4 @@ So that you can access the `ls` command outside of your `$GOPATH`
 
 ## Usage
 * Type `ls` to get the directories and files from current path
-* Type `ls ../folder ../../folder for multiple folders
+* Type `ls ../folder ../../folder` for multiple folders
