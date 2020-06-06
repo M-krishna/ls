@@ -1,5 +1,5 @@
 # ls
-For listing directories and files.
+For listing directories and files. Windows (Powershell) and linux have this command, I thought of recreating it.
 
 ## Download
 `go get github.com/M-krishna/ls`
