@@ -8,8 +8,6 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
-	"path/filepath"
-	"strings"
 )
 
 func main() {
@@ -19,42 +17,14 @@ func main() {
 	}
 
 	for _, arg := range args {
-		err := otherVersion(arg)
+		err := listDirectory(arg)
 		if err != nil {
 			log.Printf("Not able to list %s, %v\n", arg, err)
 		}
 	}
 }
 
-// Testing Purpose.
-func listCurrentDirectory(root string) error{
-	err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-
-		if info.Name()[0] == '.' {
-			return filepath.SkipDir
-		}
-		rel ,err := filepath.Rel(root, path)
-
-		if err != nil {
-			return err
-		}
-
-		depth := len(strings.Split(rel, string(filepath.Separator)))
-
-		fmt.Printf("%s%s\n", strings.Repeat("  ", depth), info.Name())
-		return nil
-	})
-
-	if err != nil {
-		return err
-	}
-	return nil
-}
-
-func otherVersion(root string) error {
+func listDirectory(root string) error {
 	fi, err := os.Stat(root)
 
 	if err != nil {
